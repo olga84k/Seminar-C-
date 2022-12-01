@@ -7,20 +7,13 @@ string number3 = Console.ReadLine() ?? "";
 int numberfirst = Convert.ToInt32(number1);
 int numbersekond = Convert.ToInt32(number2);
 int numbernext = Convert.ToInt32(number3);
-if((numberfirst < numbernext)&&(numbernext < numbersekond));
+int max = numberfirst;
+if (numberfirst < numbersekond)
 {
-    Console.WriteLine(numbersekond); 
-    if((numbersekond < numberfirst)&&(numberfirst < numbernext));
+    max = numbersekond;
+    if (max < numbernext)
     {
-    Console.WriteLine(numbernext);
-    }
-    
-}   
-if((numbersekond < numberfirst)&&(numberfirst < numbernext));
-{
-    Console.WriteLine(numbernext);
+      max = numbernext; 
+    } 
 }
- if ((numbernext < numbersekond) && (numbersekond < numberfirst));
-{
-      Console.WriteLine(numberfirst);
-}
+Console.WriteLine($"максимальное число: {max}");
