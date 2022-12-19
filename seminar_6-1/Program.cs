@@ -21,12 +21,11 @@ return result;
 
 int[] InitArray(int dimension)
 {
-Random rnd = new Random();
 int[] array = new int[dimension];
 
 for (int i = 0; i < dimension; i++)
 {
-array[i] = rnd.Next(-10,10);
+array[i] = Convert.ToInt32(Console.ReadLine());;
 }
 
 return array;
